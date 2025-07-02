@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Development | Mayank Infocom</title>
+  <link rel="stylesheet" href="web-dev.css">
+  <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
+</head>
+<body>
+    <header>
+    <div class="logo">Mayank Infocom</div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#clients">Happy Clients</a></li>
+        <li><a href="#order">Place Order</a></li>
+        <li><a href="#track">Track Status</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero-terminal">
+    <div class="terminal-glow">
+      <div id="typewriter"></div>
+    </div>
+    <div class="tech-icons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" alt="HTML5">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS3">
+      <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Symbol.png" alt="JavaScript">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/640px-Node.js_logo.svg.png" alt="Node.js">
+    </div>
+  </section>
+
+  <section class="choose-mission">
+  <h2>🧭 Choose Your Website Mission</h2>
+  <p>Select the type of website you want us to build. Your vision, our execution.</p>
+
+  <div class="mission-cards">
+    <div class="mission" onclick="showPreview('ecommerce')">
+      <h3>🛒 E-Commerce Site</h3>
+      <p>Robust, scalable, and built to sell — worldwide.</p>
+    </div>
+    <div class="mission" onclick="showPreview('portfolio')">
+      <h3>🎨 Portfolio Website</h3>
+      <p>Showcase your work with style and personality.</p>
+    </div>
+    <div class="mission" onclick="showPreview('business')">
+      <h3>🏢 Business Website</h3>
+      <p>Professional, responsive, and built for trust.</p>
+    </div>
+  </div>
+
+  <div class="preview-box" id="previewBox">
+    <h4 id="previewTitle"></h4>
+    <div class="preview-images" id="previewImages"></div>
+
+    <p id="previewText"></p>
+  </div>
+  
+</section>
+
+
+<!-- Section 3: Tech Stack Playground -->
+<section class="tech-playground">
+  <h2>💻 Tech Stack Playground</h2>
+  <p>Click a tab to peek into our toolkit</p>
+  <div class="tab-container">
+    <div class="tabs">
+      <button onclick="showCode('html')">HTML</button>
+      <button onclick="showCode('css')">CSS</button>
+      <button onclick="showCode('javascript')">JavaScript</button>
+      <button onclick="showCode('node')">Node.js</button>
+    </div>
+    <pre class="code-box" id="codeBox">
+<code>&lt;!-- Click on a tab to explore the code --&gt;</code>
+    </pre>
+  </div>
+</section>
+
+
+
+<!-- Section 4: Why Choose Us (Comic Style) -->
+<section class="comic-reasons">
+  <h2>🦸 Why Choose Us?</h2>
+  <div class="comic-cards">
+    <div class="comic-card">
+      <h3>⚙️ DevOps</h3>
+      <p>The Fixer – seamless deployment & monitoring</p>
+    </div>
+    <div class="comic-card">
+      <h3>🎯 UI/UX Design</h3>
+      <p>The Designer – pixel-perfect and intuitive</p>
+    </div>
+    <div class="comic-card">
+      <h3>🛡️ Quality Assurance</h3>
+      <p>The Shield – we break it before users can</p>
+    </div>
+    <div class="comic-card">
+      <h3>📦 Legacy Modernization</h3>
+      <p>The Time Traveller – upgrade old systems with magic</p>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+    const app = document.getElementById('typewriter');
+    const typewriter = new Typewriter(app, {
+      loop: true,
+      delay: 60,
+    });
+
+    typewriter
+      .typeString('Initializing your website journey...')
+      .pauseFor(1200)
+      .deleteAll()
+      .typeString('Building scalable, fast, beautiful web experiences 🚀')
+      .pauseFor(1200)
+      .start();
+
+    
+    const previews = {
+  ecommerce: {
+    title: "E-Commerce Preview",
+    images: ["https://cmsmart.net/images/community/8382/banner.jpg","https://themefisher.com/blog/flipmart.webp","https://www.vocso.com/blog/wp-content/uploads/2022/02/WooCommerce-Sell-Online-With-The-eCommerce-Platform-for-WordPress.jpg","https://cdn.shopify.com/s/files/1/0070/7032/files/best-web-design-3.png?v=1691010811"],
+    text: "Our e-commerce websites are fast, secure, and optimized for conversions. From product listings to checkout – it just works."
+  },
+  portfolio: {
+    title: "Portfolio Preview",
+    images: ["https://cdn.kwork.com/files/portfolio/t3/20/bfb933fcd3f49054c923c6b9d231e34d9effe768-1713894769.jpg","https://repository-images.githubusercontent.com/384091706/a1614500-e03f-11eb-986a-30f6f0d4f1cc","https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2024/09/Dalya-Baron-homepage-1024x577.png","https://5.imimg.com/data5/MH/FQ/OV/SELLER-52007146/personal-portfolio-website.jpg"],
+    text: "Highlight your creativity with animations, galleries, and modern layouts built for creatives."
+  },
+  business: {
+    title: "Business Preview",
+    images: ["https://mikekhorev.com/wp-content/uploads/2021/09/consultio-business-wordpress-theme-768x576-1.jpg","https://www.founderjar.com/wp-content/uploads/2023/08/28.-Skipio-Small-Business-Website-Example.jpeg","https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/65c183700d8fbc2492a6c314_6531361ccf5757c2e991e9fb_6pWiS1br6sImopelr9oFycse8XLyhAhsekWbiO9joSDCA1C1A8WdoqGUwSQ27hdFGHSQLYcPNW6LbG0Mj-y0shVQpObaToGnAWatUFwUItJYcEGgpcPj4A-RMiEubBUsOMT5qMlTw5n2wnsvvbA9pHo.png","https://www.sliderrevolution.com/wp-content/uploads/2021/12/iAdvice.jpg"],    
+    text: "Establish credibility online with a clean, professional site that explains who you are and what you offer."
+  }
+};
+
+function showPreview(type) {
+  const box = document.getElementById('previewBox');
+  const data = previews[type];
+
+  document.getElementById('previewTitle').innerText = data.title;
+  document.getElementById('previewText').innerText = data.text;
+
+  // Clear old images
+  const imgContainer = document.getElementById('previewImages');
+  imgContainer.innerHTML = "";
+
+  // Add new images (max 4)
+  data.images.slice(0, 4).forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = "Preview";
+    img.classList.add("multi-img");
+    imgContainer.appendChild(img);
+  });
+
+  box.style.display = 'block';
+  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+
+
+
+
+</script>
+
+<script>
+  const codeSnippet = {
+    html: `<code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Welcome&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;h1&gt;Hello World&lt;/h1&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</code>`,
+
+    css: `<code>body {\n  background: linear-gradient(to right, #111, #333);\n  color: #fff;\n  font-family: sans-serif;\n}</code>`,
+
+    javascript: `<code>function greet(name) {\n  console.log('Hello, ' + name + '!');\n}\n\ngreet('Danile');</code>`,
+
+
+    node: `<code>const express = require('express');\nconst app = express();\napp.get('/', (req, res) => res.send('Hello World!'));</code>`
+  };
+
+  function showCode(tab) {
+    const box = document.getElementById('codeBox');
+    box.innerHTML = codeSnippet[tab];
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
+<script>// Hide navbar on scroll down, show on scroll up
+let prevScrollPos = window.pageYOffset;
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollPos > currentScrollPos) {
+    navbar.style.top = '0';
+  } else {
+    navbar.style.top = '-100px';
+  }
+
+  prevScrollPos = currentScrollPos;
+});</script>
+</body>
+</html>
