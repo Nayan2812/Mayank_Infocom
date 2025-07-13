@@ -1,0 +1,304 @@
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: top 0.5s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: auto;
+  height: 50px;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+.hero-cloud {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center / cover;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-cloud-content {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.hero-cloud h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.hero-cloud h1 span {
+  color: #00e6f2;
+  background: linear-gradient(90deg, #00e6f2, #00c2cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-cloud p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-cloud-features {
+  text-align: left;
+  margin: 0 auto 2.5rem auto;
+  max-width: 700px;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.hero-cloud-features li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #00e6f2;
+  border-radius: 6px;
+}
+
+.btn-cloud {
+  background: #00e6f2;
+  color: #00334e;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-cloud:hover {
+  background: #00c2cb;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+
+/* Button */
+.btn-cloud,
+.btn-primary {
+  background: #00e6f2;
+  color: #00334e;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-cloud:hover,
+.btn-primary:hover {
+  background: #00c2cb;
+}
+
+/* ------------------ Why Cloud ------------------ */
+#why-cloud p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+}
+
+.cloud-features {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.cloud-features li {
+  background: #e0f7fa;
+  margin: 0.6rem 0;
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #004d60;
+}
+
+/* ------------------ Services ------------------ */
+.service-list .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-list .card {
+  background: #ffffff;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service-list .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-list .card h3 {
+  color: #00334e;
+  margin-bottom: 0.8rem;
+}
+
+.service-list .card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* ------------------ Benefits ------------------ */
+.benefit-section {
+  background-color: #f0f9ff;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.benefit-item {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  color: #00416d;
+}
+
+/* ------------------ Industries ------------------ */
+#industries p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+}
+
+.industry-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 4rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.industry-list li {
+  background: #e3f2fd;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #00334e;
+}
+
+/* ------------------ CTA Contact ------------------ */
+.cta-contact {
+  background: linear-gradient(to right, #0f4547, #578082);
+  color: #62c1f4;
+  padding: 4rem 2rem;
+}
+
+.cta-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* ------------------ Footer ------------------ */
+/* Footer */
+footer {
+  background-color: #00416d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 2;
+}

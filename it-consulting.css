@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f7fafd;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: top 0.5s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: auto;
+  height: 50px;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* Hero Section */
+.hero-consulting {
+  background: linear-gradient(to right, #007cf0, #00dfd8);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-consulting h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-consulting p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section Headings */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00334e;
+  margin: 3rem 0 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #00dfd8;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #007cf0;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Why Choose Us */
+.why-choose-us ul {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  list-style: none;
+}
+
+.why-choose-us li {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Process Steps */
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.step {
+  background: #e6f9fb;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #005a8d;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Industries */
+.industry-list {
+  text-align: center;
+  list-style: none;
+  padding: 1rem;
+}
+
+.industry-list li {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  font-weight: 500;
+  background: #e1f5fe;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+}
+
+/* CTA */
+.cta-contact {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: #fff;
+  color: #0072ff;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e1f5fe;
+}
+
+/* Footer */
+footer {
+  background-color: #00416d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 2;
+}

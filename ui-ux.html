@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Logos.png" type="image/png">
+
+  <title>UI/UX Design | Mayank Infocom</title>
+  <link rel="stylesheet" href="ui-ux.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="Logos.png" alt="Logo" class="logo-icon">
+      <span>Mayank Infocom</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#clients">Happy Clients</a></li>
+        <li><a href="#order">Place Order</a></li>
+        <li><a href="#track">Track Status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="glow-text">Crafting Experiences That Matter</h1>
+      <p>We don't just design interfaces — we shape digital emotions. Welcome to our UI/UX design universe.</p>
+    </div>
+  </section>
+
+  <!-- What is UI/UX Design -->
+  <section class="definition">
+    <h2>What is UI/UX Design?</h2>
+    <p>
+      UI (User Interface) design focuses on the look and layout—how elements are arranged and how they look. UX (User Experience) is all about the overall feel of the user journey—how easy and intuitive it is to navigate your digital product.
+    </p>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="approach">
+    <h2>Our Approach to UI/UX</h2>
+    <div class="approach-grid">
+      <div class="step">
+        <h3>Empathize</h3>
+        <p>Understanding your users’ needs, challenges, and desires through research and surveys.</p>
+      </div>
+      <div class="step">
+        <h3>Define</h3>
+        <p>Analyzing the collected data to define clear problems and goals.</p>
+      </div>
+      <div class="step">
+        <h3>Ideate</h3>
+        <p>Brainstorming multiple solutions and selecting the best paths forward.</p>
+      </div>
+      <div class="step">
+        <h3>Prototype</h3>
+        <p>Creating wireframes and mockups that reflect the proposed design solutions.</p>
+      </div>
+      <div class="step">
+        <h3>Test</h3>
+        <p>Testing with real users and refining based on feedback until it's just right.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services We Offer -->
+  <section class="services">
+    <h2>Design Services We Offer</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Mobile App UI</h3>
+        <p>Modern, finger-friendly interfaces for iOS and Android platforms.</p>
+      </div>
+      <div class="card">
+        <h3>Web App UX</h3>
+        <p>Layouts built for conversion, engagement, and simplicity.</p>
+      </div>
+      <div class="card">
+        <h3>Prototyping</h3>
+        <p>Clickable prototypes that bring your ideas to life before development begins.</p>
+      </div>
+      <div class="card">
+        <h3>User Journey Mapping</h3>
+        <p>Visual representations of the user’s path through your product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before vs After UI Showcase -->
+  <section class="showcase">
+    <h2>Before & After</h2>
+    <div class="before-after">
+      <img src="https://i.ytimg.com/vi/SwOI1mSqeFo/maxresdefault.jpg" alt="Before UI" />
+      <img src="https://i.ytimg.com/vi/LShnNPzQKts/maxresdefault.jpg" alt="After UI" />
+    </div>
+  </section>
+
+  <!-- Tools We Use -->
+  <section class="tools">
+    <h2>Design Tools We Master</h2>
+    <div class="tool-icons">
+      <div class="tool">Figma</div>
+      <div class="tool">Adobe XD</div>
+      <div class="tool">Photoshop</div>
+      <div class="tool">Sketch</div>
+      <div class="tool">Zeplin</div>
+      <div class="tool">Illustrator</div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <blockquote>
+        "Their design brought our app to life. Smooth, modern, and beautiful!"
+      </blockquote>
+      <blockquote>
+        "From wireframes to final UI, they guided us like pros. Users love it!"
+      </blockquote>
+      <blockquote>
+        "They didn't just create a design, they created a feeling. That's rare."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Redesign Your Experience?</h2>
+    <a href="#contact" class="btn-glow">Let’s Talk Design</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mayank Infocom. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for testimonial slider -->
+  <script>
+    let current = 0;
+    const quotes = document.querySelectorAll('.testimonial-slider blockquote');
+    setInterval(() => {
+      quotes.forEach(q => q.style.display = 'none');
+      quotes[current].style.display = 'block';
+      current = (current + 1) % quotes.length;
+    }, 4000);
+  </script>
+</body>
+</html>

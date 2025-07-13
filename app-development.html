@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="Logos.png" type="image/png">
+
+  <title>App Development | Mayank Infocom</title>
+  <link rel="stylesheet" href="app-dev.css" />
+  <script defer src="app-dev.js"></script>
+  <link rel="icon" href="Logos.png" type="image/png">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+      <img src="Logos.png" alt="Logo" class="logo-icon">
+      <span>Mayank Infocom</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#clients">Happy Clients</a></li>
+        <li><a href="#order">Place Order</a></li>
+        <li><a href="#track">Track Status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="hero">
+  <h2>Custom App Development</h2>
+  <p>We design high-performance apps that scale with your business – for Android, iOS, and cross-platform users.</p>
+</section>
+
+<section id="features" class="feature-section">
+  <h2>What We Offer</h2>
+  <div class="features">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png" alt="Android">
+      <h3>Android Development</h3>
+      <p>Optimized, native Android apps built using Java/Kotlin & Jetpack Compose.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt="iOS">
+      <h3>iOS Development</h3>
+      <p>Elegant iOS apps with Swift & Xcode — from prototypes to production.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1377/1377213.png" alt="Cross Platform">
+      <h3>Cross-Platform</h3>
+      <p>Build once, deploy everywhere — React Native & Flutter-based solutions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stacks" class="tech-stack">
+  <h2>Tech Stack</h2>
+  <ul>
+    <li><strong>Frontend:</strong> React Native, Flutter</li>
+    <li><strong>Backend:</strong> Node.js, Django, Firebase</li>
+    <li><strong>Database:</strong> MongoDB, MySQL, PostgreSQL</li>
+    <li><strong>Tools:</strong> GitHub, Docker, Postman</li>
+    <li><strong>Deployment:</strong> Play Store, App Store, CI/CD</li>
+  </ul>
+</section>
+
+<section id="why" class="why-choose-us">
+  <h2>Why Choose Us?</h2>
+  <div class="reasons">
+    <div class="reason">
+      <h3>🧩 UI/UX Focused</h3>
+      <p>We don’t just build apps — we craft experiences that users love.</p>
+    </div>
+    <div class="reason">
+      <h3>🧪 Thorough Testing</h3>
+      <p>Bug-free apps through rigorous QA, UAT, and performance testing.</p>
+    </div>
+    <div class="reason">
+      <h3>🔐 Secure & Scalable</h3>
+      <p>Bank-level security practices and future-ready architecture.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-cta">
+  <h2>Have an Idea? Let’s Build It!</h2>
+  <a href="index.html#order" class="cta-button">Place Your Order</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Mayank Infocom. All rights reserved.</p>
+  </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.card, .reason').forEach(el => {
+    el.classList.add("fade");
+    observer.observe(el);
+  });
+});
+
+</script>
+</body>
+</html>

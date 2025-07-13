@@ -1,0 +1,237 @@
+/* Reset and Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: #0f172a;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: top 0.5s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: auto;
+  height: 50px;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.glow-text {
+  font-size: 3rem;
+  color: #00f7ff;
+  text-shadow: 0 0 20px #00f7ff;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 20px #00f7ff; }
+  50% { text-shadow: 0 0 40px #00ffff; }
+}
+
+/* Section General */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* Definition */
+.definition p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+/* Approach */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.approach .step {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.approach .step:hover {
+  background: #0f172a;
+  transform: translateY(-5px);
+}
+
+/* Services Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  transition: 0.3s;
+  text-align: left;
+  box-shadow: 0 0 10px #0ea5e9;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #0f172a;
+}
+
+/* Showcase */
+.before-after {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.before-after img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+}
+
+/* Tools */
+.tool-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tool {
+  background: #0ea5e9;
+  color: #0f172a;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tool:hover {
+  background: #38bdf8;
+  transform: translateY(-5px);
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border-left: 5px solid #00f7ff;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+.testimonials blockquote:first-child {
+  display: block;
+}
+
+/* CTA */
+.cta {
+  background: #00f7ff;
+  color: #0f172a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.btn-glow {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background: #0f172a;
+  border: 2px solid #0f172a;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #0f172a;
+  transition: 0.4s ease;
+}
+
+.btn-glow:hover {
+  background: #00f7ff;
+  color: #0f172a;
+  box-shadow: 0 0 25px #00f7ff;
+}
+
+/* Footer */
+footer {
+  background-color: #00416d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 2;
+}

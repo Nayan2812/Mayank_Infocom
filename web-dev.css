@@ -2,18 +2,30 @@
 header {
   background-color: #000000;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: top 0.5s ease-in-out;
 }
-
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.7rem;
   font-weight: bold;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: auto;
+  height: 50px;
+  max-height: 100%;
+  object-fit: contain;
+
 }
 
 nav ul {
@@ -259,4 +271,16 @@ body::before {
 .comic-card:hover {
   transform: rotate(0deg) scale(1.05);
   box-shadow: 10px 10px 0 #000;
+}
+
+
+/* Footer */
+footer {
+  background-color: #00416d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 2;
 }
